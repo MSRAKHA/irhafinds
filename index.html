@@ -3,45 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Irha Finds Store</title>
 <link rel="icon" href="favicon.png">
+
+<meta name="description" content="Irha Finds Store - Best Amazon product reviews, buying guides and deals on home, kitchen, gadgets and lifestyle products.">
+<meta name="keywords" content="amazon products india, best kitchen tools, cleaning products, gadgets review, buy online india">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body {font-family:Poppins,sans-serif;margin:0;background:#f5f5f5;}
 
-header {background:#2a5298;color:white;text-align:center;padding:40px;}
+header {
+  background:#2a5298;
+  color:white;
+  text-align:center;
+  padding:40px;
+}
+
+nav {
+  text-align:center;
+  background:#eee;
+  padding:10px;
+}
+
+nav a {
+  margin:10px;
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+}
 
 .content {
-  max-width:900px;margin:20px auto;background:white;
-  padding:20px;border-radius:10px;
+  max-width:900px;
+  margin:20px auto;
+  background:white;
+  padding:20px;
+  border-radius:10px;
 }
 
 .product-container {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;padding:20px;
+  gap:20px;
+  padding:20px;
 }
 
 .product-card {
-  background:white;padding:15px;border-radius:10px;
+  background:white;
+  padding:15px;
+  border-radius:10px;
   box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 .product-card img {
-  width:100%;height:200px;object-fit:cover;border-radius:10px;
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
 }
 
 .btn {
-  display:inline-block;margin:5px;padding:8px 12px;
-  border-radius:6px;text-decoration:none;color:white;
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 12px;
+  background:#2a5298;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
 }
 
-.amazon {background:#2a5298;}
-.whatsapp {background:#25D366;}
-
-footer {text-align:center;background:#111;color:#aaa;padding:20px;}
+footer {
+  text-align:center;
+  background:#111;
+  color:#aaa;
+  padding:20px;
+}
 </style>
 </head>
 
@@ -49,200 +87,111 @@ footer {text-align:center;background:#111;color:#aaa;padding:20px;}
 
 <header>
 <h1>Irha Finds Store</h1>
-<p>Best Products Reviewed for Smart Buyers</p>
+<p>Best Amazon Product Reviews & Buying Guides</p>
 </header>
 
-<!-- INTRO CONTENT -->
-<div class="content">
-<h2>Welcome to Irha Finds Store</h2>
-<p>
-We help you discover useful and affordable products for daily life. 
-Each product is selected based on quality, reviews, and real usability.
-</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
 
-<h3>How We Choose Products</h3>
-<ul>
-<li>Based on customer ratings</li>
-<li>Value for money</li>
-<li>Daily life usefulness</li>
-</ul>
+<!-- INTRO -->
+<div class="content">
+<h2>Welcome</h2>
+<p>
+We help you find the best products available on Amazon with honest reviews, guides and recommendations.
+</p>
 </div>
 
 <!-- PRODUCTS -->
 <section class="product-container">
 
-<!-- PRODUCT 1 -->
 <div class="product-card">
 <img src="iphone charger.jpg">
 <h2>iPhone 20W Fast Charger</h2>
-<p>Fast charging adapter that powers iPhone up to 50% quickly.</p>
-
-<ul>
-<li>PD fast charging</li>
-<li>Safe for battery</li>
-<li>Compact design</li>
-</ul>
-
-<a class="btn amazon" href="https://amzn.to/4vytVm0" target="_blank">Amazon</a>
-<a class="btn whatsapp" href="https://wa.me/916305675227?text=I want iPhone 20W Charger">WhatsApp</a>
+<p>Fast PD charging adapter for iPhone 11–17 series.</p>
+<a class="btn" href="https://amzn.to/4vytVm0" target="_blank">View on Amazon</a>
 </div>
 
-<!-- PRODUCT 2 -->
 <div class="product-card">
 <img src="MAGICMOB.jpg">
 <h2>Magic Bathroom Broom</h2>
-<p>Multi-purpose cleaning tool with 180° rotation.</p>
-
-<ul>
-<li>Easy water cleaning</li>
-<li>Durable handle</li>
-<li>Space saving</li>
-</ul>
-
-<a class="btn amazon" href="https://amzn.to/4ckxeEn" target="_blank">Amazon</a>
-<a class="btn whatsapp" href="https://wa.me/916305675227?text=I want Magic Broom">WhatsApp</a>
+<p>180° rotating floor cleaning broom for easy cleaning.</p>
+<a class="btn" href="https://amzn.to/4ckxeEn" target="_blank">View on Amazon</a>
 </div>
 
-<!-- PRODUCT 3 -->
 <div class="product-card">
 <img src="HOUSEWATERMOB.jpg">
 <h2>Spray Mop</h2>
-<p>Flexible mop with built-in spray system.</p>
-
-<ul>
-<li>360° cleaning</li>
-<li>Reusable pad</li>
-<li>Lightweight</li>
-</ul>
-
-<a class="btn amazon" href="https://amzn.to/4tNvlr3">Amazon</a>
-<a class="btn whatsapp" href="https://wa.me/916305675227?text=I want Spray Mop">WhatsApp</a>
+<p>360° flexible spray mop with reusable cleaning pad.</p>
+<a class="btn" href="https://amzn.to/4tNvlr3" target="_blank">View on Amazon</a>
 </div>
 
-<!-- PRODUCT 4 -->
 <div class="product-card">
 <img src="CHAKLA.jpg">
-<h2>Chakla Belan Combo</h2>
-<p>Stainless steel roti making set.</p>
-
-<ul>
-<li>Rust-proof</li>
-<li>Hygienic</li>
-<li>Heavy duty</li>
-</ul>
-
-<a class="btn amazon" href="https://amzn.to/4t3L8C2">Amazon</a>
-<a class="btn whatsapp" href="https://wa.me/916305675227?text=I want Chakla Belan">WhatsApp</a>
+<h2>Stainless Steel Chakla Belan Combo</h2>
+<p>Rust-proof and hygienic roti making set.</p>
+<a class="btn" href="https://amzn.to/4t3L8C2" target="_blank">View on Amazon</a>
 </div>
 
-<!-- PRODUCT 5 -->
 <div class="product-card">
 <img src="Cast Iron Tawa.jpg">
 <h2>Cast Iron Tawa</h2>
-<p>Traditional cooking with natural nonstick.</p>
-
-<ul>
-<li>Healthy cooking</li>
-<li>Durable</li>
-<li>Even heating</li>
-</ul>
-
-<a class="btn amazon" href="https://amzn.to/4t3LuIS">Amazon</a>
-<a class="btn whatsapp" href="https://wa.me/916305675227?text=I want Tawa">WhatsApp</a>
+<p>Pre-seasoned durable tawa for healthy cooking.</p>
+<a class="btn" href="https://amzn.to/4t3LuIS" target="_blank">View on Amazon</a>
 </div>
 
-<!-- PRODUCT 6 -->
 <div class="product-card">
 <img src="facewash.jpg">
-<h2>Face Cleanser</h2>
-<p>Daily cleanser for glowing skin.</p>
-
-<ul>
-<li>Removes dirt</li>
-<li>Improves glow</li>
-<li>Gentle formula</li>
-</ul>
-
-<a class="btn amazon" href="https://amzn.to/480f7Cw">Amazon</a>
-<a class="btn whatsapp" href="https://wa.me/916305675227?text=I want Facewash">WhatsApp</a>
+<h2>L'Oreal Face Cleanser</h2>
+<p>Glycolic acid face wash for glowing skin.</p>
+<a class="btn" href="https://amzn.to/480f7Cw" target="_blank">View on Amazon</a>
 </div>
 
-<!-- PRODUCT 7 -->
 <div class="product-card">
 <img src="BATASLIPPER.jpg">
 <h2>Bata Slippers</h2>
-<p>Comfortable daily wear slippers.</p>
-
-<ul>
-<li>Lightweight</li>
-<li>Durable</li>
-<li>Casual use</li>
-</ul>
-
-<a class="btn amazon" href="https://amzn.to/41B6Q4j">Amazon</a>
-<a class="btn whatsapp" href="https://wa.me/916305675227?text=I want Slippers">WhatsApp</a>
+<p>Comfortable casual everyday slippers.</p>
+<a class="btn" href="https://amzn.to/41B6Q4j" target="_blank">View on Amazon</a>
 </div>
 
-<!-- PRODUCT 8 -->
 <div class="product-card">
 <img src="soccer.jpg">
 <h2>Football Size 5</h2>
-<p>Durable match-quality football.</p>
-
-<ul>
-<li>Standard size</li>
-<li>Good grip</li>
-<li>Training ready</li>
-</ul>
-
-<a class="btn amazon" href="https://amzn.to/3Q1JWk6">Amazon</a>
-<a class="btn whatsapp" href="https://wa.me/916305675227?text=I want Football">WhatsApp</a>
+<p>Durable PU leather football for training & matches.</p>
+<a class="btn" href="https://amzn.to/3Q1JWk6" target="_blank">View on Amazon</a>
 </div>
 
-<!-- PRODUCT 9 -->
 <div class="product-card">
 <img src="oneplustab.jpg">
 <h2>OnePlus Pad Lite</h2>
-<p>Big display tablet for work & entertainment.</p>
-
-<ul>
-<li>Large battery</li>
-<li>Smooth performance</li>
-<li>Great display</li>
-</ul>
-
-<a class="btn amazon" href="https://amzn.to/4ce3V6w">Amazon</a>
-<a class="btn whatsapp" href="https://wa.me/916305675227?text=I want OnePlus Pad">WhatsApp</a>
+<p>11-inch tablet with powerful battery and display.</p>
+<a class="btn" href="https://amzn.to/4ce3V6w" target="_blank">View on Amazon</a>
 </div>
 
-<!-- PRODUCT 10 -->
 <div class="product-card">
 <img src="motorola5g.jpg">
 <h2>Motorola G35 5G</h2>
-<p>Powerful smartphone with 5G connectivity.</p>
-
-<ul>
-<li>50MP camera</li>
-<li>120Hz display</li>
-<li>5000mAh battery</li>
-</ul>
-
-<a class="btn amazon" href="https://amzn.to/4efFjgc">Amazon</a>
-<a class="btn whatsapp" href="https://wa.me/916305675227?text=I want Motorola G35">WhatsApp</a>
+<p>5G smartphone with 50MP camera and 120Hz display.</p>
+<a class="btn" href="https://amzn.to/4efFjgc" target="_blank">View on Amazon</a>
 </div>
 
 </section>
 
-<!-- ABOUT -->
+<!-- BLOG PREVIEW -->
 <div class="content">
-<h2>About Us</h2>
-<p>
-Irha Finds Store helps users discover useful and affordable products.
-We focus on quality, value, and everyday usefulness.
-</p>
+<h2>Latest Blog Posts</h2>
 
-<h2>Contact</h2>
-<p>WhatsApp: +91 6305675227</p>
+<h3>Best Kitchen Tools for Indian Homes</h3>
+<p>Discover essential kitchen tools that make cooking faster and easier.</p>
+
+<h3>Top Cleaning Products for Home</h3>
+<p>Best cleaning tools to maintain hygiene easily.</p>
+
+<h3>Best Budget Gadgets 2026</h3>
+<p>Affordable gadgets with high value and performance.</p>
 </div>
 
 <!-- DISCLAIMER -->
@@ -250,7 +199,6 @@ We focus on quality, value, and everyday usefulness.
 <h3>Affiliate Disclaimer</h3>
 <p>
 As an Amazon Associate, we earn from qualifying purchases.
-This comes at no extra cost to you.
 </p>
 </div>
 
