@@ -1,4 +1,369 @@
 <!DOCTYPE html>
+<!--
+  Backup: Original file content backed up before refactor.
+  File: IRHAFINDSSTOREWEBSITECODE
+  Date: 2026-04-14
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Irha Finds Store — Curated Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      :root{
+        --bg: #f3f4f6;
+        --card: #ffffff;
+        --muted: #6b7280;
+        --accent: #ff9900; /* warm accent similar to marketplace */
+        --accent-600: #cc7a00;
+        --shadow: 0 8px 28px rgba(15,23,42,0.08);
+        --radius: 12px;
+        --max-width: 1180px;
+      }
+
+      *{box-sizing: border-box}
+      html,body{height:100%;}
+      body{
+        margin:0;
+        font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        background: var(--bg);
+        color: #111827;
+        -webkit-font-smoothing:antialiased;
+      }
+
+      header.site-header{
+        background: linear-gradient(90deg,#0f172a, #0b1220);
+        color: white;
+      }
+      .site-header .container{
+        max-width:var(--max-width);
+        margin:0 auto;
+        padding:18px 20px;
+        display:flex;
+        align-items:center;
+        gap:20px;
+        justify-content:space-between;
+      }
+      .brand{font-weight:700; letter-spacing:0.2px; font-size:1.15rem}
+      .search{flex:1; margin:0 20px}
+      .search input{
+        width:100%; padding:10px 14px; border-radius:8px; border:0; outline:0; font-size:0.95rem;
+      }
+      .actions{display:flex; gap:12px; align-items:center}
+      .actions a{color:var(--bg); text-decoration:none; font-weight:600}
+
+      main.container{
+        max-width:var(--max-width);
+        margin:28px auto;
+        padding:0 20px 40px;
+      }
+
+      .hero{
+        background: linear-gradient(90deg, rgba(255,153,0,0.08), transparent);
+        border-radius:12px; padding:20px; display:flex; align-items:center; gap:20px; margin-bottom:20px;
+      }
+      .hero h1{margin:0; font-size:1.6rem}
+      .hero p{margin:4px 0 0; color:var(--muted)}
+
+      .products-grid{
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+        gap:18px;
+        margin-top:18px;
+      }
+
+      .product-card{
+        background:var(--card);
+        border-radius:var(--radius);
+        padding:14px;
+        box-shadow:var(--shadow);
+        display:flex; flex-direction:column; gap:12px; height:100%;
+        transition:transform .18s ease, box-shadow .18s ease;
+      }
+      .product-card:hover{transform:translateY(-6px); box-shadow:0 14px 40px rgba(15,23,42,0.12)}
+      .product-media{border-radius:8px; overflow:hidden; background:#fafafa; display:flex; align-items:center; justify-content:center; height:170px}
+      .product-media img{max-width:100%; max-height:100%; display:block}
+      .product-title{font-weight:600; font-size:1rem; color:#0f172a; margin:0}
+      .product-desc{font-size:0.92rem; color:var(--muted); line-height:1.35; margin:0}
+      .product-meta{display:flex; justify-content:space-between; align-items:center; gap:12px}
+      .price{font-weight:700; color:var(--accent)}
+      .btn{
+        background:var(--accent); color:white; border:0; padding:10px 12px; border-radius:8px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+      }
+      .btn:focus{outline:2px solid rgba(255,153,0,0.18); outline-offset:2px}
+      .secondary{background:transparent; color:var(--muted); border:1px solid #e6e6e6}
+
+      footer{max-width:var(--max-width); margin:0 auto; padding:30px 20px; color:var(--muted); font-size:0.95rem}
+
+      @media (min-width:900px){
+        .hero h1{font-size:1.9rem}
+        .product-media{height:200px}
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container">
+        <div class="brand">Irha Finds</div>
+        <div class="search" role="search">
+          <input type="search" placeholder="Search products, brands and more" aria-label="Search products">
+        </div>
+        <div class="actions">
+          <a href="#" aria-label="Account">Account</a>
+          <a href="#" aria-label="Orders">Orders</a>
+          <a href="#" aria-label="Cart">Cart</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" role="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div>
+          <h1 id="hero-heading">Curated, reliable products — handpicked for you</h1>
+          <p>Fast shipping links (affiliate), clear specs and honest descriptions.</p>
+        </div>
+      </section>
+
+      <section aria-label="Featured products">
+        <div class="products-grid">
+
+          <!-- Product 1 -->
+          <article class="product-card" role="article" aria-labelledby="p1-title">
+            <div class="product-media">
+              <img src="iphone charger.jpg" alt="20W USB-C Fast Charger for iPhone" loading="lazy">
+            </div>
+            <div>
+              <h3 id="p1-title" class="product-title">iPhone 20W USB-C Fast Charger</h3>
+              <p class="product-desc">MFi-certified 20W USB-C PD fast charger — compatible with iPhone 11 through 17. Reliable, compact and BIS certified.</p>
+            </div>
+            <div class="product-meta">
+              <div class="price">₹299</div>
+              <a class="btn" href="https://amzn.to/4vytVm0" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-card" role="article" aria-labelledby="p2-title">
+            <div class="product-media">
+              <img src="MAGICMOB.jpg" alt="Rotating floor squeegee magic broom" loading="lazy">
+            </div>
+            <div>
+              <h3 id="p2-title" class="product-title">Magic Bathroom Broom — 50"</h3>
+              <p class="product-desc">50-inch rotating floor squeegee with 180° swivel — heavy-duty and multifunctional for bathroom and kitchen cleaning.</p>
+            </div>
+            <div class="product-meta">
+              <div class="price">₹749</div>
+              <a class="btn" href="https://amzn.to/4ckxeEn" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-card" role="article" aria-labelledby="p3-title">
+            <div class="product-media">
+              <img src="HOUSEWATERMOB.jpg" alt="Spray mop with washable pad" loading="lazy">
+            </div>
+            <div>
+              <h3 id="p3-title" class="product-title">Spray Mop — Stainless Steel</h3>
+              <p class="product-desc">Stainless steel spray mop with removable washable pads and 360° swivel for easy cleaning across floors and tiles.</p>
+            </div>
+            <div class="product-meta">
+              <div class="price">₹1,199</div>
+              <a class="btn" href="#" class="secondary" rel="noopener noreferrer">View details</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div style="max-width:var(--max-width); margin:0 auto; padding:0 20px; text-align:center;">
+        <p>© 2026 Irha Finds. Affiliate links may earn a commission at no extra cost to you.</p>
+        <p style="color:var(--muted); font-size:0.9rem; margin-top:6px">Need help? Contact us at support@irhafinds.example</p>
+      </div>
+    </footer>
+  </body>
+</html>
+      </p>
+
+      <a href="https://amzn.to/4tNvlr3" target="_blank" rel="noopener noreferrer">
+        View on Amazon
+      </a>
+
+    </div>
+  </section>
+
+
+    <section class="product-section">
+    <div class="product-card">
+
+      <!-- Local Image -->
+      <img src="CHAKLA.jpg" alt="">
+
+      <h2>Stainless Steel Chakla Belan Combo </h2>
+
+      <p>
+        31 cm Round Steel Chopping Board with Stainless Steel Rolling Pin | Heavy Duty, Rust Proof & Hygienic Roti Making Set
+      </p>
+
+      <a href="https://amzn.to/4t3L8C2" target="_blank" rel="noopener noreferrer">
+        View on Amazon
+      </a>
+
+    </div>
+  </section>
+
+
+    <section class="product-section">
+    <div class="product-card">
+
+      <!-- Local Image -->
+      <img src="Cast Iron Tawa.jpg" alt="">
+
+      <h2>Cast Iron Tawa</h2>
+
+      <p>
+        Pigeon by Stovekraft Pre-Seasoned Cast Iron Tawa 28 cm | Pre-Seasoned with 100% Vegetable Oil | Naturally Nonstick | High Pressure Casting | High Strength | Bring Back Nostalgic Taste | Toxin-Free
+      </p>
+
+      <a href="https://amzn.to/4t3LuIS" target="_blank" rel="noopener noreferrer">
+        View on Amazon
+      </a>
+
+    </div>
+  </section>
+
+  
+
+<section class="product-section">
+  <div class="product-card">
+
+    <!-- Local Image -->
+    <img src="facewash.jpg" alt="L'Oreal Paris Glycolic Bright Cleanser">
+
+    <h2>L'Oreal Paris Glycolic Bright Daily Foaming Cleanser</h2>
+    <p>
+      Daily foam face wash with glycolic acid that deeply cleanses,
+      exfoliates and boosts skin glow. Suitable for all skin types.
+    </p>
+
+    <a href="https://www.amazon.in/Paris-Glycolic-Foaming-Cleanser-Glowing/dp/B09ST9TN64?crid=3RTMMFGL5RMG8&dib=eyJ2IjoiMSJ9.tVhlgc_gmiV_q4OcyWpjsk67cYOXc0kUy5XWJcaJw1_VZfzZj2n6sC9BeK7LBv7Ke2szerjg8iEcQIb-hpO69jU7YNXHTfXU2quFvNuFT-qK_PC3ffA-rNExbTajcj-gC-Btam8a3EY6LebWIB2uM1m1V2ci5Uy9k5ZD3RRl3pTguhu0rWuyS13BTfqMhx80cKsNWZjFlQc4QckYJtz__zlUpPV3ay_AWksr81pgE9JHgnyaW10zt6lamkoGn7J4MY0AeD0bDYhnBf1N184uyTV5WJkuLjXKmb5ktJ9hUCk.pC2w3EXw-JQvd8dY53ppTCOVMY4g0pQ1jZFZmPa58IU&dib_tag=se&keywords=GLYCOLIC%2BFACE%2BWASH&qid=1775916267&sprefix=glycolic%2Bface%2Bwas%2Caps%2C420&sr=8-1-spons&aref=PIw58B3j8R&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=irha0cd-21&linkId=2027e528e8a65df6e18628904da95fb1&ref_=as_li_ss_tl" target="_blank">
+      View on Amazon
+    </a>
+
+  </div>
+</section>
+
+  <section class="product-section">
+  <div class="product-card">
+
+    <!-- Local Image -->
+    <img src="BATASLIPPER.jpg" alt="Bata Men's Slip-on Slipper">
+
+    <h2>Top highlights
+</h2>
+    <p>
+      Material typeSynthetic
+Closure typeSlip On
+Heel typeFlat
+Water resistance levelNot Water Resistant
+StyleCasual
+Strap typeThong
+    </p>
+
+    <a href="https://www.amazon.in/Bata-mens-ORTHO-COMFIT-Slipper/dp/B09W5YWVVN?crid=35GN1QRVBEQHE&dib=eyJ2IjoiMSJ9.buEHX059LDwIBHaqiQDEcKM1-xDu9nOzfCzMB4MW4nvO6YQAtRO5GTlWtNgeTkAt09ShLE4-AnIBXreA9BLbbI95ktTAcK7_g_SRECIZHu0VYi8n617OH_DpZfuwra2dXXGILZyty3xLGUvqWAn8wqLfmonqVHL9BCZN_pQS-_132CXDRQEZB93wvvplllA801Eb1hM9_zx080dj4xc1p2klPZchFBb5p3wvhLlRmnlJ_LAVXZD2e8oem-WEWcwK9WrSvtbnhNZDJinu_-KBkPPzhyCQu8UV2Hmp5ufgr_s.HqY9DqPqpYq4HEtfZMVPh92s0A0d3N6FTzf-4ZkNNI4&dib_tag=se&keywords=BATA%2BORTHOPEDIC%2BSLIPPERS&nsdOptOutParam=true&qid=1775915385&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=bata%2Borthopedic%2Bslipper%2Caps%2C425&sr=8-4&th=1&psc=1&linkCode=ll2&tag=irha0cd-21&linkId=5a34d3ab7200ff5faf5ca101a312f694&ref_=as_li_ss_tl" target="_blank">
+      View on Amazon
+    </a>
+
+  </div>
+</section>
+
+   <section class="product-section">
+  <div class="product-card">
+
+    <!-- Local Image -->
+    <img src="soccer.jpg" alt="Bata Men's Slip-on Slipper">
+
+    <h2>Senston Size 5 Football – Durable PU Leather 
+</h2>
+    <p>
+      Standard Size 5 Match Ball – Ready for the Field]:This is the official Size 5 football (68-70cm), the standard for players aged 12 and above. Whether it’s a competitive tournament or a casual training session, you get the same regulation size and weight you expect for consistent play
+    </p>
+
+    <a href="https://amzn.to/3Q1JWk6" target="_blank">
+      View on Amazon
+    </a>
+
+  </div>
+</section>
+
+
+    <section class="product-section">
+  <div class="product-card">
+
+    <!-- Local Image -->
+    <img src="oneplustab.jpg" alt="Bata Men's Slip-on Slipper">
+
+    <h2>OnePlus Pad Lite
+</h2>
+    <p>About this item
+[Biggest battery in segment]: 9340 mAh battery with up to 54 days of standby, 80 hours of music playback & 11 hours of video playback. 33W SUPERVOOC fast charging supported.
+[Triple your phone's real estate with a 27.94cm (11") display]: 500 nits brightneess,1 billion colors with 1920x1200 resolution, 11-inch/27.94cm Massive Display, 16:10 Screen-to-body ratio & 90 Hz refresh rate.
+[16:10 cinematic aspect ratio - all around Sound]: Four Hi-Res Audio-certified speakers dance with the OnePlus-exclusive Omnibearing Sound Field for immersive, cinematic sound that surrounds.[Eye care display]: OnePlus Eye Comfort technology reduces blue light and screen flicker even in low light. From longer binge-watching to reading sessions, staring is caring with tech that protects.
+[Processor & Operating system]: Latest OxygenOS 15 meets the MTK Helio G100 octa-core chip for power that stays as smooth as day one - for 3 years (36 months).[Open Canvas]: Split and resize the screen to open 2 apps simultaneously for faster learning, smoother working, and supersized ways to play.
+[Seamless Syncing with OnePlus]: Power your productivity with cross-screen transmission like screen mirroring to drag and drop files, videos, and images between your tablet and OnePlus phone.[Easy sharing with iPhone and other Android]: Break the barrier between OS, family, and friends. Receive and share files, videos, and images from an iPhone or Android device with a few easy taps.
+    </p>
+
+    <a href="https://amzn.to/4ce3V6w" target="_blank">
+      View on Amazon
+    </a>
+
+  </div>
+</section>
+
+
+
+    <section class="product-section">
+  <div class="product-card">
+
+    <!-- Local Image -->
+    <img src="motorola5g.jpg" alt="Bata Men's Slip-on Slipper">
+
+    <h2>Motorola g35 5G (Guava Red, 128 GB) (8 GB RAM)
+</h2>
+    <p>About this item
+Powerful Performance: Equipped with the MediaTek Dimensity 6100+ 5G processor and 8 GB RAM for smooth multitasking, gaming, and lightning-fast connectivity.
+Vibrant Display: Features a 6.6-inch Full HD+ display with a 120 Hz refresh rate for ultra-smooth visuals and an immersive viewing experience.
+Impressive Cameras: Capture stunning shots with the 50 MP AI dual camera system and click sharp selfies with the 16 MP front camera.
+Long-lasting Battery: Stay powered all day with a 5000 mAh battery supported by 20W TurboPower fast charging.
+Stylish & Durable Design: Flaunts a bold Guava Red finish with an IP52 water-repellent coating and runs on clean, secure Android 14 for a smooth user experience.
+    </p>
+
+    <a href="https://amzn.to/4efFjgc" target="_blank">
+      View on Amazon
+    </a>
+
+  </div>
+</section>
+
+
+
+
+  
+<footer>
+  © 2026 Irha Finds Store. All Rights Reserved.
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -369,4 +734,4 @@ Stylish & Durable Design: Flaunts a bold Guava Red finish with an IP52 water-rep
 </footer>
 
 </body>
-</html>
+</html> -->
