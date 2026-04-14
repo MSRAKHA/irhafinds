@@ -1,142 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Irha Finds Store</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <title>Product Card</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irha Finds Store</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
+      background: #f5f5f5;
+      color: #333;
     }
 
-    .product-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    header {
+      background: #2a5298;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
     }
 
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    /* Product Grid */
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Product Card */
     .product-card {
-      width: 320px;
       background: #fff;
       border-radius: 12px;
       padding: 15px;
       text-align: center;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      transition: 0.3s;
     }
 
     .product-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
 
     .product-card img {
       width: 100%;
       border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
     }
 
     .product-card h2 {
-      font-size: 20px;
-      margin: 15px 0 10px;
-      color: #333;
+      font-size: 18px;
+      margin: 12px 0;
     }
 
     .product-card p {
       font-size: 14px;
-      color: #666;
-      line-height: 1.5;
+      color: #555;
     }
 
     .product-card a {
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 12px;
       padding: 10px 18px;
-      background: #007BFF;
+      background: #2a5298;
       color: white;
       text-decoration: none;
       border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s ease;
+      font-weight: 600;
     }
 
     .product-card a:hover {
-      background: #0056b3;
+      background: #1e3c72;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #aaa;
+      font-size: 0.9rem;
     }
   </style>
-  
-<!-- <style>
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: #f5f5f5;
-  color: #333;
-}
-header {
-  background: #2a5298;
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-}
-header h1 {
-  font-size: 2.8rem;
-}
-.product-section {
-  display: flex;
-  justify-content: center;
-  padding: 50px 20px;
-}
-.product-card {
-  background: white;
-  border-radius: 15px;
-  max-width: 380px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  overflow: hidden;
-  padding-bottom: 20px;
-}
-.product-card img {
-  width: 100%;
-  height: auto;
-}
-.product-card h2 {
-  margin: 20px 0 10px;
-  font-size: 1.5rem;
-}
-.product-card p {
-  margin: 0 20px 15px;
-  font-size: 1rem;
-  color: #555;
-}
-.product-card a {
-  display: inline-block;
-  margin-top: 15px;
-  background: #2a5298;
-  color: white;
-  text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-.product-card a:hover {
-  background: #1e3c72;
-}
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #111;
-  color: #aaa;
-  font-size: 0.9rem;
-}
-</style> -->
-  
 </head>
+
 <body>
 
 <header>
@@ -144,226 +106,81 @@ footer {
   <p>Premium Products for Modern Lifestyle</p>
 </header>
 
+<!-- Product Section -->
+<section class="product-container">
 
-  <section class="product-section">
-    <div class="product-card">
-
-      <!-- Local Image -->
-      <img src="iphone charger.jpg" alt="iPhone 20W USB-C Fast Charger">
-
-      <h2>iPhone 20W USB-C Fast Charger</h2>
-
-      <p>
-        20W USB-C Fast Charger (MFi Certified) compatible with iPhone 17, 16, 15, 14, 13, 12, and 11 series. 
-        Supports PD 3.0 fast charging and is BIS certified.
-      </p>
-
-      <a href="https://amzn.to/4vytVm0" target="_blank" rel="noopener noreferrer">
-        View on Amazon
-      </a>
-
-    </div>
-  </section>
-
-
-  
-
-   <section class="product-section">
-    <div class="product-card">
-
-      <!-- Local Image -->
-      <img src="MAGICMOB.jpg" alt="">
-
-      <h2>Magic Bathroom Broom</h2>
-
-      <p>
-        50-Inch Rotating Floor Squeegee, Heavy Duty Bathroom Wiper with 180-Degree Swivel Head,Multifunctional Magic Broom Floor Squeegee with Long Handle (Magic)
-      </p>
-
-      <a href="https://amzn.to/4ckxeEn" target="_blank" rel="noopener noreferrer">
-        View on Amazon
-      </a>
-
-    </div>
-  </section>
-
-
-    <section class="product-section">
-    <div class="product-card">
-
-      <!-- Local Image -->
-      <img src="HOUSEWATERMOB.jpg" alt="">
-
-      <h2>Spray Mop</h2>
-
-      <p>
-        Stainless Steel Heavy Quality Floor Mop with Removable Washable Cleaning Pad, Flexible Kitchen tap Flat sprey Cleaning Supplies 360 Flexible Easy Cleaning.
-      </p>
-
-      <a href="https://amzn.to/4tNvlr3" target="_blank" rel="noopener noreferrer">
-        View on Amazon
-      </a>
-
-    </div>
-  </section>
-
-
-    <section class="product-section">
-    <div class="product-card">
-
-      <!-- Local Image -->
-      <img src="CHAKLA.jpg" alt="">
-
-      <h2>Stainless Steel Chakla Belan Combo </h2>
-
-      <p>
-        31 cm Round Steel Chopping Board with Stainless Steel Rolling Pin | Heavy Duty, Rust Proof & Hygienic Roti Making Set
-      </p>
-
-      <a href="https://amzn.to/4t3L8C2" target="_blank" rel="noopener noreferrer">
-        View on Amazon
-      </a>
-
-    </div>
-  </section>
-
-
-    <section class="product-section">
-    <div class="product-card">
-
-      <!-- Local Image -->
-      <img src="Cast Iron Tawa.jpg" alt="">
-
-      <h2>Cast Iron Tawa</h2>
-
-      <p>
-        Pigeon by Stovekraft Pre-Seasoned Cast Iron Tawa 28 cm | Pre-Seasoned with 100% Vegetable Oil | Naturally Nonstick | High Pressure Casting | High Strength | Bring Back Nostalgic Taste | Toxin-Free
-      </p>
-
-      <a href="https://amzn.to/4t3LuIS" target="_blank" rel="noopener noreferrer">
-        View on Amazon
-      </a>
-
-    </div>
-  </section>
-
-  
-
-<section class="product-section">
   <div class="product-card">
-
-    <!-- Local Image -->
-    <img src="facewash.jpg" alt="L'Oreal Paris Glycolic Bright Cleanser">
-
-    <h2>L'Oreal Paris Glycolic Bright Daily Foaming Cleanser</h2>
-    <p>
-      Daily foam face wash with glycolic acid that deeply cleanses,
-      exfoliates and boosts skin glow. Suitable for all skin types.
-    </p>
-
-    <a href="https://www.amazon.in/Paris-Glycolic-Foaming-Cleanser-Glowing/dp/B09ST9TN64?crid=3RTMMFGL5RMG8&dib=eyJ2IjoiMSJ9.tVhlgc_gmiV_q4OcyWpjsk67cYOXc0kUy5XWJcaJw1_VZfzZj2n6sC9BeK7LBv7Ke2szerjg8iEcQIb-hpO69jU7YNXHTfXU2quFvNuFT-qK_PC3ffA-rNExbTajcj-gC-Btam8a3EY6LebWIB2uM1m1V2ci5Uy9k5ZD3RRl3pTguhu0rWuyS13BTfqMhx80cKsNWZjFlQc4QckYJtz__zlUpPV3ay_AWksr81pgE9JHgnyaW10zt6lamkoGn7J4MY0AeD0bDYhnBf1N184uyTV5WJkuLjXKmb5ktJ9hUCk.pC2w3EXw-JQvd8dY53ppTCOVMY4g0pQ1jZFZmPa58IU&dib_tag=se&keywords=GLYCOLIC%2BFACE%2BWASH&qid=1775916267&sprefix=glycolic%2Bface%2Bwas%2Caps%2C420&sr=8-1-spons&aref=PIw58B3j8R&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=irha0cd-21&linkId=2027e528e8a65df6e18628904da95fb1&ref_=as_li_ss_tl" target="_blank">
-      View on Amazon
-    </a>
-
+    <img src="iphone charger.jpg" alt="iPhone Charger">
+    <h2>iPhone 20W USB-C Fast Charger</h2>
+    <p>Fast charging with PD 3.0 support. Compatible with iPhone 11–17 series.</p>
+    <a href="https://amzn.to/4vytVm0" target="_blank">View on Amazon</a>
   </div>
+
+  <div class="product-card">
+    <img src="MAGICMOB.jpg" alt="Magic Broom">
+    <h2>Magic Bathroom Broom</h2>
+    <p>180° rotating floor squeegee with long handle for easy cleaning.</p>
+    <a href="https://amzn.to/4ckxeEn" target="_blank">View on Amazon</a>
+  </div>
+
+  <div class="product-card">
+    <img src="HOUSEWATERMOB.jpg" alt="Spray Mop">
+    <h2>Spray Mop</h2>
+    <p>360° flexible spray mop with washable pad for efficient cleaning.</p>
+    <a href="https://amzn.to/4tNvlr3" target="_blank">View on Amazon</a>
+  </div>
+
+  <div class="product-card">
+    <img src="CHAKLA.jpg" alt="Chakla Belan">
+    <h2>Chakla Belan Combo</h2>
+    <p>Stainless steel roti making set, rust-proof and hygienic.</p>
+    <a href="https://amzn.to/4t3L8C2" target="_blank">View on Amazon</a>
+  </div>
+
+  <div class="product-card">
+    <img src="Cast Iron Tawa.jpg" alt="Tawa">
+    <h2>Cast Iron Tawa</h2>
+    <p>Pre-seasoned nonstick tawa for authentic cooking experience.</p>
+    <a href="https://amzn.to/4t3LuIS" target="_blank">View on Amazon</a>
+  </div>
+
+  <div class="product-card">
+    <img src="facewash.jpg" alt="Facewash">
+    <h2>Glycolic Bright Cleanser</h2>
+    <p>Daily face wash that exfoliates and boosts skin glow.</p>
+    <a href="https://www.amazon.in/" target="_blank">View on Amazon</a>
+  </div>
+
+  <div class="product-card">
+    <img src="BATASLIPPER.jpg" alt="Slipper">
+    <h2>Bata Slip-on Slipper</h2>
+    <p>Comfortable casual slippers with synthetic material.</p>
+    <a href="https://www.amazon.in/" target="_blank">View on Amazon</a>
+  </div>
+
+  <div class="product-card">
+    <img src="soccer.jpg" alt="Football">
+    <h2>Size 5 Football</h2>
+    <p>Durable PU leather match ball for training and matches.</p>
+    <a href="https://amzn.to/3Q1JWk6" target="_blank">View on Amazon</a>
+  </div>
+
+  <div class="product-card">
+    <img src="oneplustab.jpg" alt="Tablet">
+    <h2>OnePlus Pad Lite</h2>
+    <p>11-inch display, big battery, smooth performance tablet.</p>
+    <a href="https://amzn.to/4ce3V6w" target="_blank">View on Amazon</a>
+  </div>
+
+  <div class="product-card">
+    <img src="motorola5g.jpg" alt="Motorola Phone">
+    <h2>Motorola G35 5G</h2>
+    <p>8GB RAM, 50MP camera, 120Hz display smartphone.</p>
+    <a href="https://amzn.to/4efFjgc" target="_blank">View on Amazon</a>
+  </div>
+
 </section>
 
-  <section class="product-section">
-  <div class="product-card">
-
-    <!-- Local Image -->
-    <img src="BATASLIPPER.jpg" alt="Bata Men's Slip-on Slipper">
-
-    <h2>Top highlights
-</h2>
-    <p>
-      Material typeSynthetic
-Closure typeSlip On
-Heel typeFlat
-Water resistance levelNot Water Resistant
-StyleCasual
-Strap typeThong
-    </p>
-
-    <a href="https://www.amazon.in/Bata-mens-ORTHO-COMFIT-Slipper/dp/B09W5YWVVN?crid=35GN1QRVBEQHE&dib=eyJ2IjoiMSJ9.buEHX059LDwIBHaqiQDEcKM1-xDu9nOzfCzMB4MW4nvO6YQAtRO5GTlWtNgeTkAt09ShLE4-AnIBXreA9BLbbI95ktTAcK7_g_SRECIZHu0VYi8n617OH_DpZfuwra2dXXGILZyty3xLGUvqWAn8wqLfmonqVHL9BCZN_pQS-_132CXDRQEZB93wvvplllA801Eb1hM9_zx080dj4xc1p2klPZchFBb5p3wvhLlRmnlJ_LAVXZD2e8oem-WEWcwK9WrSvtbnhNZDJinu_-KBkPPzhyCQu8UV2Hmp5ufgr_s.HqY9DqPqpYq4HEtfZMVPh92s0A0d3N6FTzf-4ZkNNI4&dib_tag=se&keywords=BATA%2BORTHOPEDIC%2BSLIPPERS&nsdOptOutParam=true&qid=1775915385&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=bata%2Borthopedic%2Bslipper%2Caps%2C425&sr=8-4&th=1&psc=1&linkCode=ll2&tag=irha0cd-21&linkId=5a34d3ab7200ff5faf5ca101a312f694&ref_=as_li_ss_tl" target="_blank">
-      View on Amazon
-    </a>
-
-  </div>
-</section>
-
-   <section class="product-section">
-  <div class="product-card">
-
-    <!-- Local Image -->
-    <img src="soccer.jpg" alt="Bata Men's Slip-on Slipper">
-
-    <h2>Senston Size 5 Football – Durable PU Leather 
-</h2>
-    <p>
-      Standard Size 5 Match Ball – Ready for the Field]:This is the official Size 5 football (68-70cm), the standard for players aged 12 and above. Whether it’s a competitive tournament or a casual training session, you get the same regulation size and weight you expect for consistent play
-    </p>
-
-    <a href="https://amzn.to/3Q1JWk6" target="_blank">
-      View on Amazon
-    </a>
-
-  </div>
-</section>
-
-
-    <section class="product-section">
-  <div class="product-card">
-
-    <!-- Local Image -->
-    <img src="oneplustab.jpg" alt="Bata Men's Slip-on Slipper">
-
-    <h2>OnePlus Pad Lite
-</h2>
-    <p>About this item
-[Biggest battery in segment]: 9340 mAh battery with up to 54 days of standby, 80 hours of music playback & 11 hours of video playback. 33W SUPERVOOC fast charging supported.
-[Triple your phone's real estate with a 27.94cm (11") display]: 500 nits brightneess,1 billion colors with 1920x1200 resolution, 11-inch/27.94cm Massive Display, 16:10 Screen-to-body ratio & 90 Hz refresh rate.
-[16:10 cinematic aspect ratio - all around Sound]: Four Hi-Res Audio-certified speakers dance with the OnePlus-exclusive Omnibearing Sound Field for immersive, cinematic sound that surrounds.[Eye care display]: OnePlus Eye Comfort technology reduces blue light and screen flicker even in low light. From longer binge-watching to reading sessions, staring is caring with tech that protects.
-[Processor & Operating system]: Latest OxygenOS 15 meets the MTK Helio G100 octa-core chip for power that stays as smooth as day one - for 3 years (36 months).[Open Canvas]: Split and resize the screen to open 2 apps simultaneously for faster learning, smoother working, and supersized ways to play.
-[Seamless Syncing with OnePlus]: Power your productivity with cross-screen transmission like screen mirroring to drag and drop files, videos, and images between your tablet and OnePlus phone.[Easy sharing with iPhone and other Android]: Break the barrier between OS, family, and friends. Receive and share files, videos, and images from an iPhone or Android device with a few easy taps.
-    </p>
-
-    <a href="https://amzn.to/4ce3V6w" target="_blank">
-      View on Amazon
-    </a>
-
-  </div>
-</section>
-
-
-
-    <section class="product-section">
-  <div class="product-card">
-
-    <!-- Local Image -->
-    <img src="motorola5g.jpg" alt="Bata Men's Slip-on Slipper">
-
-    <h2>Motorola g35 5G (Guava Red, 128 GB) (8 GB RAM)
-</h2>
-    <p>About this item
-Powerful Performance: Equipped with the MediaTek Dimensity 6100+ 5G processor and 8 GB RAM for smooth multitasking, gaming, and lightning-fast connectivity.
-Vibrant Display: Features a 6.6-inch Full HD+ display with a 120 Hz refresh rate for ultra-smooth visuals and an immersive viewing experience.
-Impressive Cameras: Capture stunning shots with the 50 MP AI dual camera system and click sharp selfies with the 16 MP front camera.
-Long-lasting Battery: Stay powered all day with a 5000 mAh battery supported by 20W TurboPower fast charging.
-Stylish & Durable Design: Flaunts a bold Guava Red finish with an IP52 water-repellent coating and runs on clean, secure Android 14 for a smooth user experience.
-    </p>
-
-    <a href="https://amzn.to/4efFjgc" target="_blank">
-      View on Amazon
-    </a>
-
-  </div>
-</section>
-
-
-
-
-  
 <footer>
   © 2026 Irha Finds Store. All Rights Reserved.
 </footer>
