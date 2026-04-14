@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Irha Finds Store</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Title + Favicon -->
+  <title>Irha Finds Store</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -21,9 +25,13 @@
       padding: 50px 20px;
     }
 
+    header h1 {
+      margin: 0;
+    }
+
     .product-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
       padding: 30px;
       max-width: 1200px;
@@ -31,11 +39,11 @@
     }
 
     .product-card {
-      background: #fff;
+      background: white;
       border-radius: 12px;
       padding: 15px;
       text-align: center;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.1);
     }
 
     .product-card img {
@@ -56,12 +64,12 @@
     }
 
     .btn-group {
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     .btn {
       display: inline-block;
-      padding: 8px 14px;
+      padding: 8px 12px;
       margin: 5px;
       border-radius: 6px;
       text-decoration: none;
@@ -93,49 +101,109 @@
   <p>Premium Products for Modern Lifestyle</p>
 </header>
 
-<section class="product-container">
-
-  <!-- Product Example -->
-  <div class="product-card">
-    <img src="iphone charger.jpg">
-    <h2>iPhone 20W Fast Charger</h2>
-    <p>Fast PD charging for iPhones.</p>
-
-    <div class="btn-group">
-      <a class="btn amazon" href="https://amzn.to/4vytVm0" target="_blank">Amazon</a>
-
-      <a class="btn whatsapp" 
-         href="https://wa.me/916305675227?text=Hi,%20I%20want%20to%20buy%20iPhone%2020W%20Fast%20Charger"
-         target="_blank">
-         WhatsApp
-      </a>
-    </div>
-  </div>
-
-  <!-- Duplicate this block for other products -->
-
-  <div class="product-card">
-    <img src="MAGICMOB.jpg">
-    <h2>Magic Bathroom Broom</h2>
-    <p>180° rotating cleaning broom.</p>
-
-    <div class="btn-group">
-      <a class="btn amazon" href="https://amzn.to/4ckxeEn" target="_blank">Amazon</a>
-
-      <a class="btn whatsapp" 
-         href="https://wa.me/916305675227?text=Hi,%20I%20want%20to%20buy%20Magic%20Bathroom%20Broom"
-         target="_blank">
-         WhatsApp
-      </a>
-    </div>
-  </div>
-
-</section>
+<section class="product-container" id="products"></section>
 
 <footer>
   📞 WhatsApp Orders: +91 6305675227 <br>
   © 2026 Irha Finds Store
 </footer>
+
+<!-- JavaScript for Dynamic Products -->
+<script>
+const phoneNumber = "916305675227";
+
+const products = [
+  {
+    name: "iPhone 20W Fast Charger",
+    desc: "Fast PD charging for iPhones.",
+    img: "iphone charger.jpg",
+    link: "https://amzn.to/4vytVm0"
+  },
+  {
+    name: "Magic Bathroom Broom",
+    desc: "180° rotating cleaning broom.",
+    img: "MAGICMOB.jpg",
+    link: "https://amzn.to/4ckxeEn"
+  },
+  {
+    name: "Spray Mop",
+    desc: "360° flexible spray mop.",
+    img: "HOUSEWATERMOB.jpg",
+    link: "https://amzn.to/4tNvlr3"
+  },
+  {
+    name: "Chakla Belan Combo",
+    desc: "Stainless steel roti set.",
+    img: "CHAKLA.jpg",
+    link: "https://amzn.to/4t3L8C2"
+  },
+  {
+    name: "Cast Iron Tawa",
+    desc: "Nonstick traditional cooking.",
+    img: "Cast Iron Tawa.jpg",
+    link: "https://amzn.to/4t3LuIS"
+  },
+  {
+    name: "Face Cleanser",
+    desc: "Glow boosting face wash.",
+    img: "facewash.jpg",
+    link: "https://amzn.to/480f7Cw"
+  },
+  {
+    name: "Bata Slippers",
+    desc: "Comfort casual wear.",
+    img: "BATASLIPPER.jpg",
+    link: "https://amzn.to/41B6Q4j"
+  },
+  {
+    name: "Football Size 5",
+    desc: "Durable PU leather ball.",
+    img: "soccer.jpg",
+    link: "https://amzn.to/3Q1JWk6"
+  },
+  {
+    name: "OnePlus Pad Lite",
+    desc: "Big display tablet.",
+    img: "oneplustab.jpg",
+    link: "https://amzn.to/4ce3V6w"
+  },
+  {
+    name: "Motorola G35 5G",
+    desc: "Powerful 5G smartphone.",
+    img: "motorola5g.jpg",
+    link: "https://amzn.to/4efFjgc"
+  }
+];
+
+// Render Products
+const container = document.getElementById("products");
+
+products.forEach(product => {
+  const whatsappMsg = encodeURIComponent(
+    "Hi, I want to buy " + product.name
+  );
+
+  const card = `
+    <div class="product-card">
+      <img src="${product.img}">
+      <h2>${product.name}</h2>
+      <p>${product.desc}</p>
+
+      <div class="btn-group">
+        <a class="btn amazon" href="${product.link}" target="_blank">Amazon</a>
+
+        <a class="btn whatsapp" 
+           href="https://wa.me/${phoneNumber}?text=${whatsappMsg}" 
+           target="_blank">
+           WhatsApp
+        </a>
+      </div>
+    </div>
+  `;
+
+  container.innerHTML += card;
+});
+</script>
 
 </body>
 </html>
