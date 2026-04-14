@@ -3,93 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Title + Favicon -->
   <title>Irha Finds Store</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" href="favicon.png">
 
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-    }
+    body {font-family:Poppins,sans-serif;margin:0;background:#f5f5f5;}
 
     header {
-      background: #2a5298;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
+      background:#2a5298;color:white;text-align:center;padding:40px 20px;
     }
 
-    header h1 {
-      margin: 0;
+    .content {
+      max-width:900px;margin:30px auto;padding:20px;background:white;border-radius:10px;
     }
 
     .product-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      padding: 30px;
-      max-width: 1200px;
-      margin: auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+      padding:20px;
+      max-width:1200px;
+      margin:auto;
     }
 
     .product-card {
-      background: white;
-      border-radius: 12px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+      background:white;border-radius:12px;padding:15px;
+      box-shadow:0 5px 12px rgba(0,0,0,0.1);
     }
 
     .product-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .product-card h2 {
-      font-size: 18px;
-      margin: 10px 0;
-    }
-
-    .product-card p {
-      font-size: 14px;
-      color: #555;
-    }
-
-    .btn-group {
-      margin-top: 10px;
+      width:100%;height:200px;object-fit:cover;border-radius:10px;
     }
 
     .btn {
-      display: inline-block;
-      padding: 8px 12px;
-      margin: 5px;
-      border-radius: 6px;
-      text-decoration: none;
-      color: white;
-      font-size: 14px;
-    }
-
-    .amazon {
-      background: #2a5298;
-    }
-
-    .whatsapp {
-      background: #25D366;
+      display:inline-block;margin-top:10px;padding:8px 12px;
+      background:#2a5298;color:white;text-decoration:none;border-radius:6px;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #aaa;
+      text-align:center;padding:20px;background:#111;color:#aaa;
     }
   </style>
 </head>
@@ -98,113 +52,102 @@
 
 <header>
   <h1>Irha Finds Store</h1>
-  <p>Premium Products for Modern Lifestyle</p>
+  <p>Best Products Reviewed for Smart Buyers</p>
 </header>
 
-<section class="product-container" id="products"></section>
+<!-- INTRO CONTENT (VERY IMPORTANT) -->
+<div class="content">
+  <h2>Welcome to Irha Finds Store</h2>
+  <p>
+    We help you discover useful and affordable products for daily life. 
+    Every product listed here is carefully selected based on quality, usability, and value for money.
+  </p>
+
+  <h3>How We Choose Products</h3>
+  <ul>
+    <li>Based on customer reviews and ratings</li>
+    <li>Value for money</li>
+    <li>Daily life usefulness</li>
+  </ul>
+</div>
+
+<!-- PRODUCTS -->
+<section class="product-container">
+
+  <div class="product-card">
+    <img src="iphone charger.jpg">
+    <h2>iPhone 20W Fast Charger</h2>
+
+    <p>Fast charging adapter that powers your iPhone up to 50% in 30 minutes.</p>
+
+    <h4>Why we recommend:</h4>
+    <ul>
+      <li>Fast PD charging</li>
+      <li>Safe for battery</li>
+      <li>Compact design</li>
+    </ul>
+
+    <a class="btn" href="https://amzn.to/4vytVm0" target="_blank">View on Amazon</a>
+  </div>
+
+  <div class="product-card">
+    <img src="MAGICMOB.jpg">
+    <h2>Magic Bathroom Broom</h2>
+
+    <p>Multi-purpose floor cleaning tool with 180° rotation.</p>
+
+    <h4>Best for:</h4>
+    <ul>
+      <li>Bathroom cleaning</li>
+      <li>Water removal</li>
+      <li>Easy storage</li>
+    </ul>
+
+    <a class="btn" href="https://amzn.to/4ckxeEn" target="_blank">View on Amazon</a>
+  </div>
+
+  <div class="product-card">
+    <img src="HOUSEWATERMOB.jpg">
+    <h2>Spray Mop</h2>
+
+    <p>Convenient floor cleaning mop with spray system.</p>
+
+    <h4>Why choose this:</h4>
+    <ul>
+      <li>360° cleaning</li>
+      <li>Reusable pads</li>
+      <li>Water-saving</li>
+    </ul>
+
+    <a class="btn" href="https://amzn.to/4tNvlr3" target="_blank">View on Amazon</a>
+  </div>
+
+</section>
+
+<!-- ABOUT + CONTACT -->
+<div class="content">
+  <h2>About Us</h2>
+  <p>
+    Irha Finds Store is a product discovery platform that helps users find the best items online.
+    We focus on quality, affordability, and real usefulness.
+  </p>
+
+  <h2>Contact</h2>
+  <p>WhatsApp: +91 6305675227</p>
+</div>
+
+<!-- DISCLAIMER (MANDATORY) -->
+<div class="content">
+  <h3>Affiliate Disclaimer</h3>
+  <p>
+    As an Amazon Associate, we earn from qualifying purchases. 
+    This helps support our website at no extra cost to you.
+  </p>
+</div>
 
 <footer>
-  📞 WhatsApp Orders: +91 6305675227 <br>
   © 2026 Irha Finds Store
 </footer>
 
-<!-- JavaScript for Dynamic Products -->
-<script>
-const phoneNumber = "916305675227";
-
-const products = [
-  {
-    name: "iPhone 20W Fast Charger",
-    desc: "Fast PD charging for iPhones.",
-    img: "iphone charger.jpg",
-    link: "https://amzn.to/4vytVm0"
-  },
-  {
-    name: "Magic Bathroom Broom",
-    desc: "180° rotating cleaning broom.",
-    img: "MAGICMOB.jpg",
-    link: "https://amzn.to/4ckxeEn"
-  },
-  {
-    name: "Spray Mop",
-    desc: "360° flexible spray mop.",
-    img: "HOUSEWATERMOB.jpg",
-    link: "https://amzn.to/4tNvlr3"
-  },
-  {
-    name: "Chakla Belan Combo",
-    desc: "Stainless steel roti set.",
-    img: "CHAKLA.jpg",
-    link: "https://amzn.to/4t3L8C2"
-  },
-  {
-    name: "Cast Iron Tawa",
-    desc: "Nonstick traditional cooking.",
-    img: "Cast Iron Tawa.jpg",
-    link: "https://amzn.to/4t3LuIS"
-  },
-  {
-    name: "Face Cleanser",
-    desc: "Glow boosting face wash.",
-    img: "facewash.jpg",
-    link: "https://amzn.to/480f7Cw"
-  },
-  {
-    name: "Bata Slippers",
-    desc: "Comfort casual wear.",
-    img: "BATASLIPPER.jpg",
-    link: "https://amzn.to/41B6Q4j"
-  },
-  {
-    name: "Football Size 5",
-    desc: "Durable PU leather ball.",
-    img: "soccer.jpg",
-    link: "https://amzn.to/3Q1JWk6"
-  },
-  {
-    name: "OnePlus Pad Lite",
-    desc: "Big display tablet.",
-    img: "oneplustab.jpg",
-    link: "https://amzn.to/4ce3V6w"
-  },
-  {
-    name: "Motorola G35 5G",
-    desc: "Powerful 5G smartphone.",
-    img: "motorola5g.jpg",
-    link: "https://amzn.to/4efFjgc"
-  }
-];
-
-// Render Products
-const container = document.getElementById("products");
-
-products.forEach(product => {
-  const whatsappMsg = encodeURIComponent(
-    "Hi, I want to buy " + product.name
-  );
-
-  const card = `
-    <div class="product-card">
-      <img src="${product.img}">
-      <h2>${product.name}</h2>
-      <p>${product.desc}</p>
-
-      <div class="btn-group">
-        <a class="btn amazon" href="${product.link}" target="_blank">Amazon</a>
-
-        
-      </div>
-    </div>
-  `;
-
-  container.innerHTML += card;
-});
-</script>
-
 </body>
 </html>
-<!--<a class="btn whatsapp" 
-           href="https://wa.me/${phoneNumber}?text=${whatsappMsg}" 
-           target="_blank">
-           WhatsApp
-        </a>  -->
