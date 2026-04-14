@@ -4,38 +4,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Irha Finds Store</title>
+<title>Irha Finds Store - Best Amazon Deals & Reviews</title>
+
 <link rel="icon" href="favicon.png">
 
-<meta name="description" content="Irha Finds Store - Best Amazon product reviews, buying guides and deals on home, kitchen, gadgets and lifestyle products.">
-<meta name="keywords" content="amazon products india, best kitchen tools, cleaning products, gadgets review, buy online india">
+<meta name="description" content="Irha Finds Store - Best Amazon product reviews, deals, and buying guides for kitchen, home, gadgets, fashion, and lifestyle products in India.">
+<meta name="keywords" content="amazon deals india, best kitchen tools, cleaning products, gadgets review, online shopping india, product reviews">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body {font-family:Poppins,sans-serif;margin:0;background:#f5f5f5;}
+body{
+  font-family:Poppins,sans-serif;
+  margin:0;
+  background:#f5f5f5;
+}
 
-header {
+header{
   background:#2a5298;
   color:white;
   text-align:center;
-  padding:40px;
+  padding:40px 20px;
 }
 
-nav {
+nav{
   text-align:center;
   background:#eee;
   padding:10px;
 }
 
-nav a {
+nav a{
   margin:10px;
   text-decoration:none;
   color:#333;
   font-weight:600;
 }
 
-.content {
+.content{
   max-width:900px;
   margin:20px auto;
   background:white;
@@ -43,38 +48,52 @@ nav a {
   border-radius:10px;
 }
 
-.product-container {
+.product-container{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:20px;
   padding:20px;
+  max-width:1200px;
+  margin:auto;
 }
 
-.product-card {
+.product-card{
   background:white;
   padding:15px;
   border-radius:10px;
   box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  text-align:center;
 }
 
-.product-card img {
+.product-card img{
   width:100%;
   height:200px;
   object-fit:cover;
   border-radius:10px;
 }
 
-.btn {
+.product-card h2{
+  font-size:18px;
+  margin:10px 0;
+}
+
+.product-card p{
+  font-size:14px;
+  color:#555;
+}
+
+.btn{
   display:inline-block;
   margin-top:10px;
-  padding:8px 12px;
+  padding:10px 12px;
   background:#2a5298;
   color:white;
   text-decoration:none;
   border-radius:6px;
+  font-weight:600;
 }
 
-footer {
+footer{
   text-align:center;
   background:#111;
   color:#aaa;
@@ -87,118 +106,126 @@ footer {
 
 <header>
 <h1>Irha Finds Store</h1>
-<p>Best Amazon Product Reviews & Buying Guides</p>
+<p>Best Amazon Products, Deals & Honest Reviews</p>
 </header>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="blog.html">Blog</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+<a href="#products">Products</a>
+<a href="#blog">Blog</a>
+<a href="#about">About</a>
 </nav>
 
 <!-- INTRO -->
 <div class="content">
-<h2>Welcome</h2>
+<h2>Welcome to Irha Finds Store 👋</h2>
 <p>
-We help you find the best products available on Amazon with honest reviews, guides and recommendations.
+We help you discover the best Amazon products with honest reviews, buying guides, and comparisons.
+Our goal is to help you save money and choose the right product easily.
 </p>
 </div>
 
 <!-- PRODUCTS -->
-<section class="product-container">
+<section id="products" class="product-container">
 
 <div class="product-card">
 <img src="iphone charger.jpg">
 <h2>iPhone 20W Fast Charger</h2>
-<p>Fast PD charging adapter for iPhone 11–17 series.</p>
-<a class="btn" href="https://amzn.to/4vytVm0" target="_blank">View on Amazon</a>
+<p>Fast PD charging adapter compatible with iPhone 11–17 series.</p>
+<a class="btn" href="https://amzn.to/4vytVm0" target="_blank">Buy on Amazon</a>
 </div>
 
 <div class="product-card">
 <img src="MAGICMOB.jpg">
 <h2>Magic Bathroom Broom</h2>
-<p>180° rotating floor cleaning broom for easy cleaning.</p>
-<a class="btn" href="https://amzn.to/4ckxeEn" target="_blank">View on Amazon</a>
+<p>180° rotating floor cleaner for easy bathroom cleaning.</p>
+<a class="btn" href="https://amzn.to/4ckxeEn" target="_blank">Buy on Amazon</a>
 </div>
 
 <div class="product-card">
 <img src="HOUSEWATERMOB.jpg">
 <h2>Spray Mop</h2>
-<p>360° flexible spray mop with reusable cleaning pad.</p>
-<a class="btn" href="https://amzn.to/4tNvlr3" target="_blank">View on Amazon</a>
+<p>360° flexible spray mop for quick floor cleaning.</p>
+<a class="btn" href="https://amzn.to/4tNvlr3" target="_blank">Buy on Amazon</a>
 </div>
 
 <div class="product-card">
 <img src="CHAKLA.jpg">
-<h2>Stainless Steel Chakla Belan Combo</h2>
-<p>Rust-proof and hygienic roti making set.</p>
-<a class="btn" href="https://amzn.to/4t3L8C2" target="_blank">View on Amazon</a>
+<h2>Chakla Belan Combo</h2>
+<p>Stainless steel roti making set, rust-proof and durable.</p>
+<a class="btn" href="https://amzn.to/4t3L8C2" target="_blank">Buy on Amazon</a>
 </div>
 
 <div class="product-card">
 <img src="Cast Iron Tawa.jpg">
 <h2>Cast Iron Tawa</h2>
-<p>Pre-seasoned durable tawa for healthy cooking.</p>
-<a class="btn" href="https://amzn.to/4t3LuIS" target="_blank">View on Amazon</a>
+<p>Pre-seasoned healthy cooking tawa for daily use.</p>
+<a class="btn" href="https://amzn.to/4t3LuIS" target="_blank">Buy on Amazon</a>
 </div>
 
 <div class="product-card">
 <img src="facewash.jpg">
 <h2>L'Oreal Face Cleanser</h2>
-<p>Glycolic acid face wash for glowing skin.</p>
-<a class="btn" href="https://amzn.to/480f7Cw" target="_blank">View on Amazon</a>
+<p>Glycolic face wash for glowing and clean skin.</p>
+<a class="btn" href="https://amzn.to/480f7Cw" target="_blank">Buy on Amazon</a>
 </div>
 
 <div class="product-card">
 <img src="BATASLIPPER.jpg">
 <h2>Bata Slippers</h2>
-<p>Comfortable casual everyday slippers.</p>
-<a class="btn" href="https://amzn.to/41B6Q4j" target="_blank">View on Amazon</a>
+<p>Comfortable daily wear slippers for men.</p>
+<a class="btn" href="https://amzn.to/41B6Q4j" target="_blank">Buy on Amazon</a>
 </div>
 
 <div class="product-card">
 <img src="soccer.jpg">
 <h2>Football Size 5</h2>
 <p>Durable PU leather football for training & matches.</p>
-<a class="btn" href="https://amzn.to/3Q1JWk6" target="_blank">View on Amazon</a>
+<a class="btn" href="https://amzn.to/3Q1JWk6" target="_blank">Buy on Amazon</a>
 </div>
 
 <div class="product-card">
 <img src="oneplustab.jpg">
 <h2>OnePlus Pad Lite</h2>
-<p>11-inch tablet with powerful battery and display.</p>
-<a class="btn" href="https://amzn.to/4ce3V6w" target="_blank">View on Amazon</a>
+<p>11-inch tablet with powerful battery and smooth performance.</p>
+<a class="btn" href="https://amzn.to/4ce3V6w" target="_blank">Buy on Amazon</a>
 </div>
 
 <div class="product-card">
 <img src="motorola5g.jpg">
 <h2>Motorola G35 5G</h2>
 <p>5G smartphone with 50MP camera and 120Hz display.</p>
-<a class="btn" href="https://amzn.to/4efFjgc" target="_blank">View on Amazon</a>
+<a class="btn" href="https://amzn.to/4efFjgc" target="_blank">Buy on Amazon</a>
 </div>
 
 </section>
 
-<!-- BLOG PREVIEW -->
-<div class="content">
-<h2>Latest Blog Posts</h2>
+<!-- BLOG SECTION -->
+<div id="blog" class="content">
+<h2>🧠 Blog & Buying Guides</h2>
 
 <h3>Best Kitchen Tools for Indian Homes</h3>
-<p>Discover essential kitchen tools that make cooking faster and easier.</p>
+<p>Chakla belan and cast iron tawa are must-have kitchen tools for every home.</p>
 
 <h3>Top Cleaning Products for Home</h3>
-<p>Best cleaning tools to maintain hygiene easily.</p>
+<p>Magic broom and spray mop make cleaning easy and fast.</p>
 
-<h3>Best Budget Gadgets 2026</h3>
-<p>Affordable gadgets with high value and performance.</p>
+<h3>Best Budget Gadgets in 2026</h3>
+<p>Fast chargers, smartphones and tablets offer best value for money.</p>
 </div>
 
-<!-- DISCLAIMER -->
+<!-- ABOUT -->
+<div id="about" class="content">
+<h2>About Us</h2>
+<p>
+Irha Finds Store is a product review website that helps users find the best Amazon products with honest recommendations.
+</p>
+</div>
+
+<!-- AFFILIATE DISCLAIMER -->
 <div class="content">
 <h3>Affiliate Disclaimer</h3>
 <p>
-As an Amazon Associate, we earn from qualifying purchases.
+As an Amazon Associate, we earn from qualifying purchases at no extra cost to you.
 </p>
 </div>
 
