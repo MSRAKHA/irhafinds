@@ -1,123 +1,218 @@
 <!DOCTYPE html>
-<!--
-  Backup: Original file content backed up before refactor.
-  File: IRHAFINDSSTOREWEBSITECODE
-  Date: 2026-04-14
--->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Irha Finds Store — Curated Products</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irha Finds Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Product Card</title>
 
-    <style>
-      :root{
-        --bg: #f3f4f6;
-        --card: #ffffff;
-        --muted: #6b7280;
-        --accent: #ff9900; /* warm accent similar to marketplace */
-        --accent-600: #cc7a00;
-        --shadow: 0 8px 28px rgba(15,23,42,0.08);
-        --radius: 12px;
-        --max-width: 1180px;
-      }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
 
-      *{box-sizing: border-box}
-      html,body{height:100%;}
-      body{
-        margin:0;
-        font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-        background: var(--bg);
-        color: #111827;
-        -webkit-font-smoothing:antialiased;
-      }
+    .product-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-      header.site-header{
-        background: linear-gradient(90deg,#0f172a, #0b1220);
-        color: white;
-      }
-      .site-header .container{
-        max-width:var(--max-width);
-        margin:0 auto;
-        padding:18px 20px;
-        display:flex;
-        align-items:center;
-        gap:20px;
-        justify-content:space-between;
-      }
-      .brand{font-weight:700; letter-spacing:0.2px; font-size:1.15rem}
-      .search{flex:1; margin:0 20px}
-      .search input{
-        width:100%; padding:10px 14px; border-radius:8px; border:0; outline:0; font-size:0.95rem;
-      }
-      .actions{display:flex; gap:12px; align-items:center}
-      .actions a{color:var(--bg); text-decoration:none; font-weight:600}
+    .product-card {
+      width: 320px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
 
-    
-      <!-- Affiliate helper: ensure Amazon links include the affiliate tracking tag for source attribution -->
-      <script>
-        (function(){
-          const AFFILIATE_TAG = 'irha0cd-21';
-          document.addEventListener('click', function(e){
-            const a = e.target.closest && e.target.closest('a[href]');
-            if(!a) return;
-            try{
-              const href = a.getAttribute('href');
-              if(!href) return;
-              // Only modify amazon links (also handles regional domains like amazon.in, amazon.com)
-              if(/amazon\./i.test(href) || /amzn\.to/i.test(href)){
-                // if tag already present, do nothing
-                if(/([?&])tag=/i.test(href)) return;
-                e.preventDefault();
-                const sep = href.indexOf('?') === -1 ? '?' : '&';
-                const newUrl = href + sep + 'tag=' + AFFILIATE_TAG;
-                // If link opens in new tab, use window.open with noopener
-                if(a.target === '_blank') window.open(newUrl, '_blank', 'noopener');
-                else window.location.href = newUrl;
-              }
-            }catch(err){
-              // fail silently
-              console.error(err);
-            }
-          }, false);
-        })();
-      </script>
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
 
-      <!-- Structured data for featured products (basic) -->
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Product",
-              "name": "iPhone 20W USB-C Fast Charger",
-              "image": ["iphone charger.jpg"],
-              "description": "MFi-certified 20W USB-C PD fast charger — compatible with iPhone 11 through 17. Reliable, compact and BIS certified.",
-              "sku": "IRHA-CHG-20W",
-              "offers": { "@type": "Offer", "priceCurrency": "INR", "price": "299", "url": "https://amzn.to/4vytVm0" }
-            },
-            {
-              "@type": "Product",
-              "name": "Magic Bathroom Broom — 50\"",
-              "image": ["MAGICMOB.jpg"],
-              "description": "50-inch rotating floor squeegee with 180° swivel — heavy-duty and multifunctional for bathroom and kitchen cleaning.",
-              "sku": "IRHA-BRM-50",
-              "offers": { "@type": "Offer", "priceCurrency": "INR", "price": "749", "url": "https://amzn.to/4ckxeEn" }
-            },
-            {
-              "@type": "Product",
-              "name": "Spray Mop — Stainless Steel",
-              "image": ["HOUSEWATERMOB.jpg"],
-              "description": "Stainless steel spray mop with removable washable pads and 360° swivel for easy cleaning across floors and tiles.",
-              "sku": "IRHA-MOP-SS",
-              "offers": { "@type": "Offer", "priceCurrency": "INR", "price": "1199", "url": "#" }
-            }
-          ]
-        }
-      </script>
-      main.container{
-        max-width:var(--max-width);
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-card h2 {
+      font-size: 20px;
+      margin: 15px 0 10px;
+      color: #333;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .product-card a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .product-card a:hover {
+      background: #0056b3;
+    }
+  </style>
+  
+<!-- <style>
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+header {
+  background: #2a5298;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+header h1 {
+  font-size: 2.8rem;
+}
+.product-section {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+.product-card {
+  background: white;
+  border-radius: 15px;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+.product-card h2 {
+  margin: 20px 0 10px;
+  font-size: 1.5rem;
+}
+.product-card p {
+  margin: 0 20px 15px;
+  font-size: 1rem;
+  color: #555;
+}
+.product-card a {
+  display: inline-block;
+  margin-top: 15px;
+  background: #2a5298;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.product-card a:hover {
+  background: #1e3c72;
+}
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #111;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+</style> -->
+  
+</head>
+<body>
+
+<header>
+  <h1>Irha Finds Store</h1>
+  <p>Premium Products for Modern Lifestyle</p>
+</header>
+
+
+  <section class="product-section">
+    <div class="product-card">
+
+      <!-- Local Image -->
+      <img src="iphone charger.jpg" alt="iPhone 20W USB-C Fast Charger">
+
+      <h2>iPhone 20W USB-C Fast Charger</h2>
+
+      <p>
+        20W USB-C Fast Charger (MFi Certified) compatible with iPhone 17, 16, 15, 14, 13, 12, and 11 series. 
+        Supports PD 3.0 fast charging and is BIS certified.
+      </p>
+
+      <a href="https://amzn.to/4vytVm0" target="_blank" rel="noopener noreferrer">
+        View on Amazon
+      </a>
+
+    </div>
+  </section>
+
+
+  
+
+   <section class="product-section">
+    <div class="product-card">
+
+      <!-- Local Image -->
+      <img src="MAGICMOB.jpg" alt="">
+
+      <h2>Magic Bathroom Broom</h2>
+
+      <p>
+        50-Inch Rotating Floor Squeegee, Heavy Duty Bathroom Wiper with 180-Degree Swivel Head,Multifunctional Magic Broom Floor Squeegee with Long Handle (Magic)
+      </p>
+
+      <a href="https://amzn.to/4ckxeEn" target="_blank" rel="noopener noreferrer">
+        View on Amazon
+      </a>
+
+    </div>
+  </section>
+
+
+    <section class="product-section">
+    <div class="product-card">
+
+      <!-- Local Image -->
+      <img src="HOUSEWATERMOB.jpg" alt="">
+
+      <h2>Spray Mop</h2>
+
+      <p>
+        Stainless Steel Heavy Quality Floor Mop with Removable Washable Cleaning Pad, Flexible Kitchen tap Flat sprey Cleaning Supplies 360 Flexible Easy Cleaning.
+      </p>
+
+      <a href="https://amzn.to/4tNvlr3" target="_blank" rel="noopener noreferrer">
+        View on Amazon
+      </a>
+
+    </div>
+  </section>
+
+
+    <section class="product-section">
+    <div class="product-card">
+
+      <!-- Local Image -->
+      <img src="CHAKLA.jpg" alt="">
 
       <h2>Stainless Steel Chakla Belan Combo </h2>
 
